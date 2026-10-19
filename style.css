@@ -85,3 +85,11 @@ footer { border-top: 1px solid var(--line); color: var(--muted); padding: 24px 0
 footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
 footer a { color: var(--faint); }
 footer a:hover { color: var(--white); }
+
+/* Who can set it up */
+.card .setup { display: flex; gap: 10px; align-items: flex-start; margin-top: 16px; padding: 12px 14px; border-radius: 12px;
+  background: rgba(255,255,255,.04); border: 1px solid var(--line); font-size: .92rem; line-height: 1.4; color: var(--soft); }
+.card .setup b { color: var(--white); }
+.lvl { display: inline-flex; gap: 3px; margin-top: 5px; flex: none; }
+.lvl i { width: 7px; height: 12px; border-radius: 2px; background: var(--line); }
+.lvl i.on { background: var(--faint); }
