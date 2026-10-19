@@ -59,7 +59,8 @@ a { color: inherit; }
   margin-top: clamp(28px, 5vw, 48px); list-style: none; padding: 0; }
 .card { display: flex; flex-direction: column; height: 100%; border-radius: 20px; overflow: hidden; background: var(--card);
   border: 1px solid var(--line); text-decoration: none; transition: border-color .15s, transform .15s; }
-.card:hover { border-color: var(--muted); transform: translateY(-2px); }
+a.card:hover { border-color: var(--muted); transform: translateY(-2px); }
+.card.soon .btn { background: transparent; color: var(--faint); border: 1.5px dashed var(--line); }
 @media (prefers-reduced-motion: reduce) { .card, .card:hover { transition: none; transform: none; } }
 .card .band { display: flex; gap: 16px; align-items: center; padding: 22px; color: var(--white); }
 .card .band img { width: 64px; height: 64px; border-radius: 14px; flex: none; display: block; }
