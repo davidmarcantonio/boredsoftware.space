@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bored Room support — Bored Software</title>
+<meta name="description" content="FAQs, setup guides and MDM configuration keys for Bored Room.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bored Software">
+<meta property="og:url" content="https://boredsoftware.space/support/room.html">
+<meta property="og:title" content="Bored Room support — Bored Software">
+<meta property="og:description" content="FAQs, setup guides and MDM configuration keys for Bored Room.">
+<meta property="og:image" content="https://boredsoftware.space/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The four Bored apps, Room, Scanner, Package and Guest, next to the headline Software that does one job.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#23282E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="../favicon.png?v=2">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="../style.css?v=5">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="panel">
+    <div class="top">
+      <a class="brand" href="../"><img src="../mark.png?v=2" alt="" width="30" height="30">Bored Software</a>
+      <nav class="toplinks"><a href="../">Apps</a><a href="./">Support</a><a href="../about.html">About</a></nav>
+    </div>
+    <p class="crumbs"><a href="./">Support</a> <span aria-hidden="true">›</span> Bored Room</p>
+  </header>
+
+  <div class="appbar room">
+    <img src="../app-room.png" alt="" width="72" height="72">
+    <div><h1>Bored Room support</h1><p class="tag">Is the room free? · iPad · Coming soon · <a href="https://boredroom.space">boredroom.space</a></p></div>
+  </div>
+  <nav class="toc" aria-label="On this page"><a href="#faq">FAQ</a><a href="#guides">Guides</a><a href="#mdm">MDM keys</a><a href="#contact">Contact</a></nav>
+</div>
+
+<main class="wrap doc">
+  <section id="faq">
+    <h2>FAQ</h2>
+      <details>
+        <summary>When can I buy it?</summary>
+        <p>Soon. Bored Room is waiting on Apple's App Store review. The setup guides are ready now, so you can plan the wall and power while you wait.</p>
+      </details>
+      <details>
+        <summary>Which iPads does it run on?</summary>
+        <p>Any iPad on iPadOS 17 or later. An older iPad you already own is fine; the app is light. It works in landscape and portrait.</p>
+      </details>
+      <details>
+        <summary>Does it work with Microsoft 365 or Outlook?</summary>
+        <p>Not yet. Version 1 is Google Workspace only. Microsoft 365 is next; if that's you, <a href="mailto:boredroom@bacstech.io">tell us</a> so we know how many of you there are.</p>
+      </details>
+      <details>
+        <summary>Do I need to buy a Google Workspace account for the room?</summary>
+        <p>No. The simplest setup signs the iPad in with an account you already have, ideally a shared one like front desk. If you'd rather no one's account were on the iPad, a Google service account is free, has no mailbox, and reads only the rooms you share with it. The <a href="https://boredroom.space/setup.html">setup guides</a> cover both.</p>
+      </details>
+      <details>
+        <summary>What does the app need from Google?</summary>
+        <p>Two permissions: the list of calendars on the account, so you can pick the room, and access to events, so it can show the room's meetings and let people book it from the door. Once set up, it reads one calendar: the room you picked. Admins can see <a href="https://boredroom.space/privacy.html#google-permissions">the exact Google scopes</a> before approving.</p>
+      </details>
+      <details>
+        <summary>What happens at night and on weekends?</summary>
+        <p>You pick the days and hours the board is on (Monday to Friday, 7 AM to 5 PM by default, or always on). Outside those hours the screen goes black at minimum backlight. A touch brings the live board back for a minute, and a meeting that runs late keeps it lit until it ends.</p>
+      </details>
+      <details>
+        <summary>I forgot the PIN.</summary>
+        <p>Tap "Forgot PIN?" on the PIN screen and prove you're the admin the same way the iPad was set up: sign in again as the board's Google account, or choose the service account's key file again. If your MDM pushes the PIN, change it there instead.</p>
+      </details>
+      <details>
+        <summary>How do I keep people from changing the settings?</summary>
+        <p>Settings sit behind a PIN. For a wall-mounted iPad, lock it to the app with Guided Access, or Single App Mode through Apple Configurator or your MDM.</p>
+      </details>
+      <details>
+        <summary>Is there a subscription, ever?</summary>
+        <p>No. 99¢ buys the app. Updates are free.</p>
+      </details>
+  </section>
+
+  <section id="guides">
+    <h2>Guides</h2>
+    <p>Start with the wall: power and a mount at each door come before the app.</p>
+    <ul class="guides">
+      <li><a href="https://boredroom.space/mounting.html">Mounting and power</a><span>Spot, power or PoE, mount, cabling quote. Do this first.</span></li>
+      <li><a href="https://boredroom.space/setup-manual.html">Set up by hand</a><span>For an office admin. About 15 minutes the first time.</span></li>
+      <li><a href="https://boredroom.space/setup-configurator.html">Set up with Apple Configurator</a><span>For the one-person IT shop. Supervision and Single App Mode.</span></li>
+      <li><a href="https://boredroom.space/setup-mdm.html">Deploy through your MDM</a><span>Zero-touch for Jamf, Mosyle, Iru (Kandji), Intune and similar.</span></li>
+      <li><a href="https://boredroom.space/setup-service-account.html">Set up a Google service account</a><span>No person's account on the iPad. Needed for MDM.</span></li>
+      <li><a href="https://boredroom.space/mounting-checklist.pdf">Room planning checklist (PDF)</a><span>One sheet per room, one for the office.</span></li>
+      <li><a href="https://boredroom.space/privacy.html">Privacy policy</a><span>Including the exact Google scopes.</span></li>
+    </ul>
+  </section>
+
+  <section id="mdm">
+    <h2>MDM configuration</h2>
+    <dl class="facts">
+      <dt>Bundle ID</dt><dd><code>com.dmarcantonio.RoomBoard</code> (the App Store name is Bored Room; the bundle ID predates the rename)</dd>
+      <dt>Format</dt><dd>Standard Managed App Configuration (AppConfig) dictionary. Every key is optional. A pushed key overrides the iPad's value and locks it in Settings.</dd>
+      <dt>Spec file</dt><dd><a href="https://boredroom.space/BoredRoom.appconfig.xml">BoredRoom.appconfig.xml</a> for consoles that import AppConfig Community specs (Workspace ONE, Ivanti, MaaS360, SOTI, ManageEngine). Jamf, Intune, Mosyle and Iru take the dictionary as a plist.</dd>
+      <dt>Full guide</dt><dd><a href="https://boredroom.space/setup-mdm.html">Deploy through your MDM</a>, with plist and Intune examples, scoping, verification and troubleshooting.</dd>
+    </dl>
+    <h3>Keys</h3>
+<div class="tablewrap"><table class="keys">
+<thead><tr><th>Key</th><th>Type</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><code>serviceAccountKey</code></td><td>String</td><td>The Google service account key file, raw JSON or base64. Same value on every iPad.</td></tr>
+<tr><td><code>calendarId</code></td><td>String</td><td>The room's calendar ID, e.g. <code>c_…@resource.calendar.google.com</code>. One per iPad; skips the room picker.</td></tr>
+<tr><td><code>roomName</code></td><td>String</td><td>Text at the top of the board. One per iPad.</td></tr>
+<tr><td><code>pin</code></td><td>String</td><td>Exactly 4 digits, as a string. Guards the app's Settings.</td></tr>
+<tr><td><code>allowBooking</code></td><td>Boolean</td><td>Show "Book now" when the room is free. Needs write access on the share.</td></tr>
+<tr><td><code>showMeetingTitles</code></td><td>Boolean</td><td><code>false</code> shows "Meeting" instead of titles. Private meetings never show titles.</td></tr>
+<tr><td><code>background</code></td><td>String</td><td><code>midnight</code>, <code>slate</code>, <code>ocean</code>, <code>plum</code> or <code>charcoal</code>.</td></tr>
+<tr><td><code>font</code></td><td>String</td><td><code>classic</code> (San Francisco), <code>inter</code>, <code>manrope</code>, <code>publicsans</code>, <code>sourcesans</code>, <code>geist</code>, <code>hanken</code> or <code>archivo</code>.</td></tr>
+<tr><td><code>alwaysOn</code></td><td>Boolean</td><td><code>true</code> keeps the board lit around the clock. Leave <code>false</code> to use the days and hours.</td></tr>
+<tr><td><code>activeDays</code></td><td>String</td><td>Days the board is lit, e.g. <code>Mon,Tue,Wed,Thu,Fri</code> or <code>Mon-Fri</code>.</td></tr>
+<tr><td><code>activeHours</code></td><td>String</td><td>24-hour range, e.g. <code>07:00-17:00</code>. 15-minute steps; <code>24:00</code> allowed as the end.</td></tr>
+<tr><td><code>backgroundImageURL</code></td><td>String</td><td>An <code>https://</code> link to a JPEG, PNG or HEIC, 10 MB or less. Downloaded at most once a day. Locks the Background section.</td></tr>
+<tr><td><code>backgroundDimming</code></td><td>Integer</td><td>How much the photo is darkened, 30 to 90 (percent). Default 55.</td></tr>
+</tbody></table></div>
+    <p class="small">With <code>serviceAccountKey</code>, <code>calendarId</code>, <code>roomName</code> and <code>pin</code> set, the iPad skips setup and boots to the board. If none of the hours keys are pushed, the default is Monday to Friday, 07:00 to 17:00.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Stuck, or a console we haven't covered? Email <a href="mailto:boredroom@bacstech.io?subject=Bored%20Room%20support">boredroom@bacstech.io</a>. One inbox, read by a person. </p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Bored Software is a proudly “boring” product line of <a href="https://www.bacstech.io">BACS Tech, Inc.</a></span>
+    <span><a href="../">Apps</a> &middot; <a href="./">Support</a> &middot; <a href="../about.html">About</a> &middot; <a href="mailto:hello@bacstech.io">hello@bacstech.io</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

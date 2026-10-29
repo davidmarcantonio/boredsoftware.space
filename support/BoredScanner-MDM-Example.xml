@@ -1,0 +1,35 @@
+<dict>
+    <key>BoredScannerConfiguration</key>
+    <string>{
+      "schemaVersion": 1,
+      "destinations": [{
+        "id": "company-snipeit",
+        "name": "Company inventory",
+        "provider": "snipe-it",
+        "baseURL": "https://REPLACE-WITH-YOUR-SERVER.example.invalid",
+        "enabled": true,
+        "fieldMappings": {
+          "serial": "serial",
+          "wifiMAC": "_snipeit_REPLACE_WITH_WIFI_MAC_DB_FIELD"
+        },
+        "createDefaults": {
+          "model_id": 1,
+          "status_id": 2
+        },
+        "allowServerGeneratedAssetTag": true
+      }]
+    }</string>
+
+    <key>BoredScannerToken_company-snipeit</key>
+    <string>REPLACE_WITH_YOUR_API_TOKEN</string>
+
+    <key>BoredScannerLocalCSVEnabled</key>
+    <false/>
+
+    <key>BoredScannerCaptureProfiles</key>
+    <string>{
+      "schemaVersion": 1,
+      "defaultProfileID": "apple",
+      "disabledFieldIDs": ["bluetoothMAC"]
+    }</string>
+</dict>

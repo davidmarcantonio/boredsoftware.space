@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bored Scanner support — Bored Software</title>
+<meta name="description" content="FAQs, setup guides and MDM configuration keys for Bored Scanner.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bored Software">
+<meta property="og:url" content="https://boredsoftware.space/support/scanner.html">
+<meta property="og:title" content="Bored Scanner support — Bored Software">
+<meta property="og:description" content="FAQs, setup guides and MDM configuration keys for Bored Scanner.">
+<meta property="og:image" content="https://boredsoftware.space/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The four Bored apps, Room, Scanner, Package and Guest, next to the headline Software that does one job.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#23282E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="../favicon.png?v=2">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="../style.css?v=5">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="panel">
+    <div class="top">
+      <a class="brand" href="../"><img src="../mark.png?v=2" alt="" width="30" height="30">Bored Software</a>
+      <nav class="toplinks"><a href="../">Apps</a><a href="./">Support</a><a href="../about.html">About</a></nav>
+    </div>
+    <p class="crumbs"><a href="./">Support</a> <span aria-hidden="true">›</span> Bored Scanner</p>
+  </header>
+
+  <div class="appbar scanner">
+    <img src="../app-scanner.png" alt="" width="72" height="72">
+    <div><h1>Bored Scanner support</h1><p class="tag">Who has this laptop? · iPhone &amp; iPad · Coming soon · <a href="https://boredscanner.space">boredscanner.space</a></p></div>
+  </div>
+  <nav class="toc" aria-label="On this page"><a href="#faq">FAQ</a><a href="#guides">Guides</a><a href="#mdm">MDM keys</a><a href="#contact">Contact</a></nav>
+</div>
+
+<main class="wrap doc">
+  <section id="faq">
+    <h2>FAQ</h2>
+      <details>
+        <summary>When can I buy it?</summary>
+        <p>Soon. Bored Scanner is finishing testing before it goes to the App Store.</p>
+      </details>
+      <details>
+        <summary>Does it work with my asset system?</summary>
+        <p>Snipe-IT today, plus Local CSV for any spreadsheet. Other asset systems are added on request. <a href="mailto:hello@bacstech.io?subject=Bored%20Scanner%3A%20please%20add%20my%20asset%20system">Tell us which one you use</a>.</p>
+      </details>
+      <details>
+        <summary>Can I use it without Snipe-IT?</summary>
+        <p>Yes. Pick Local CSV and Inventory saves each checked scan to a CSV file on the device. Export it by AirDrop, Mail or Files and open it in your spreadsheet. Assign, Lookup and Retire switch on when you connect Snipe-IT, at no extra cost.</p>
+      </details>
+      <details>
+        <summary>iPhone or iPad?</summary>
+        <p>Either. One app runs on both.</p>
+      </details>
+      <details>
+        <summary>Does it read every manufacturer's labels?</summary>
+        <p>Apple's labels are built in. For anything else, add a label profile: tell it what the serial and MAC lines are called on that label, and it looks for those. Whatever it isn't sure of is flagged for you to check.</p>
+      </details>
+      <details>
+        <summary>Where do employee names come from?</summary>
+        <p>From your asset system's own user list, using the same connection and API token. There's no separate Google, Okta or HR login in Bored Scanner. Sync those into Snipe-IT and they show up.</p>
+      </details>
+      <details>
+        <summary>Does Retire wipe the device?</summary>
+        <p>No. Retire marks the asset retired in your asset system and keeps its record. Wiping and disposal stay with your MDM and your recycler.</p>
+      </details>
+      <details>
+        <summary>Is there a subscription, ever?</summary>
+        <p>No. 99¢ buys the app. Updates are free.</p>
+      </details>
+  </section>
+
+  <section id="guides">
+    <h2>Guides</h2>
+    <p>Step-by-step setup guides for Snipe-IT will be published here with the App Store release. Until then, the MDM section below lists every setting an admin can push.</p>
+    <ul class="guides">
+      <li><a href="https://boredscanner.space/">boredscanner.space</a><span>What it does, who it's for, screenshots.</span></li>
+      <li><a href="https://boredscanner.space/privacy.html">Privacy policy</a><span>What stays on the device, what goes to your asset system.</span></li>
+    </ul>
+  </section>
+
+  <section id="mdm">
+    <h2>MDM configuration</h2>
+    <p class="lede-doc">Set it up once. Send the same settings to every managed iPhone or iPad.</p>
+    <dl class="facts">
+      <dt>Bundle ID</dt><dd><code>com.dmarcantonio.BoredScanner</code></dd>
+      <dt>Format</dt><dd>Standard Apple Managed App Configuration (AppConfig), from an MDM such as Jamf or Kandji. Managed settings take priority over local settings and appear locked in the app.</dd>
+    </dl>
+
+    <h3>Keys</h3>
+<div class="tablewrap"><table class="keys">
+<thead><tr><th>Key</th><th>Type</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><code>BoredScannerConfiguration</code></td><td>JSON string</td><td>Destinations, mappings, new-asset defaults and lifecycle settings</td></tr>
+<tr><td><code>BoredScannerToken_&lt;destination-id&gt;</code></td><td>String</td><td>API token for that destination</td></tr>
+<tr><td><code>BoredScannerCaptureProfiles</code></td><td>JSON string</td><td>Capture profiles, field switches and initial profile</td></tr>
+<tr><td><code>BoredScannerLocalCSVEnabled</code></td><td>Boolean</td><td>Enable or disable local CSV saving and export</td></tr>
+</tbody></table></div>
+    <p>Use a real Boolean, not the string <code>"true"</code>. Merge entries into the complete app configuration, preserving existing destination and token keys.</p>
+
+    <h3 id="sample">Sample configuration (Snipe-IT)</h3>
+    <p>This example preconfigures a Snipe-IT connection, selects Apple as the initial capture profile, turns off Bluetooth MAC capture, and turns off local CSV saving and export. Managed settings appear locked in the app.</p>
+    <p>Paste the whole dictionary into the app's configuration editor: <strong>App Configuration</strong> in Jamf Pro, or <strong>Set app configuration</strong> for the app in Kandji. It's an AppConfig dictionary, not a standalone <code>.mobileconfig</code> profile. Don't nest it inside a <code>com.apple.configuration.managed</code> key. <a href="BoredScanner-MDM-Example.xml" download>Download the sample (XML)</a>.</p>
+<pre><code>&lt;dict&gt;
+    &lt;key&gt;BoredScannerConfiguration&lt;/key&gt;
+    &lt;string&gt;{
+      "schemaVersion": 1,
+      "destinations": [{
+        "id": "company-snipeit",
+        "name": "Company inventory",
+        "provider": "snipe-it",
+        "baseURL": "https://REPLACE-WITH-YOUR-SERVER.example.invalid",
+        "enabled": true,
+        "fieldMappings": {
+          "serial": "serial",
+          "wifiMAC": "_snipeit_REPLACE_WITH_WIFI_MAC_DB_FIELD"
+        },
+        "createDefaults": {
+          "model_id": 1,
+          "status_id": 2
+        },
+        "allowServerGeneratedAssetTag": true
+      }]
+    }&lt;/string&gt;
+
+    &lt;key&gt;BoredScannerToken_company-snipeit&lt;/key&gt;
+    &lt;string&gt;REPLACE_WITH_YOUR_API_TOKEN&lt;/string&gt;
+
+    &lt;key&gt;BoredScannerLocalCSVEnabled&lt;/key&gt;
+    &lt;false/&gt;
+
+    &lt;key&gt;BoredScannerCaptureProfiles&lt;/key&gt;
+    &lt;string&gt;{
+      "schemaVersion": 1,
+      "defaultProfileID": "apple",
+      "disabledFieldIDs": ["bluetoothMAC"]
+    }&lt;/string&gt;
+&lt;/dict&gt;</code></pre>
+
+    <h3>What to set</h3>
+    <p>Replace every placeholder before deploying. The sample values are examples, not defaults.</p>
+    <div class="tablewrap"><table class="keys">
+<thead><tr><th>In the sample</th><th>Set it to</th></tr></thead>
+<tbody>
+<tr><td><code>baseURL</code><br><code>https://REPLACE-WITH-YOUR-SERVER.example.invalid</code></td><td>Your Snipe-IT site address, starting with <code>https://</code>. Include an installation subpath if you have one; leave off <code>/api/v1</code>.</td></tr>
+<tr><td><code>BoredScannerToken_company-snipeit</code><br><code>REPLACE_WITH_YOUR_API_TOKEN</code></td><td>The API token for the Snipe-IT account the app should act as. Scope that account to what the app needs.</td></tr>
+<tr><td><code>id</code><br><code>company-snipeit</code></td><td>Any short ID you like, but it must match the token key name exactly: <code>id: "acme-snipeit"</code> pairs with <code>BoredScannerToken_acme-snipeit</code>. Change one, change both.</td></tr>
+<tr><td><code>name</code><br><code>Company inventory</code></td><td>The display name people see in the app.</td></tr>
+<tr><td><code>fieldMappings.wifiMAC</code><br><code>_snipeit_REPLACE_WITH_WIFI_MAC_DB_FIELD</code></td><td>The <strong>DB Field Name</strong> of your Wi-Fi MAC custom field in Snipe-IT (Settings › Custom Fields), not its display label. Remove this line if you don't send Wi-Fi MAC.</td></tr>
+<tr><td><code>createDefaults.model_id</code><br><code>1</code></td><td>The numeric ID of the Snipe-IT model new assets get. <code>1</code> is an example, not a universal ID.</td></tr>
+<tr><td><code>createDefaults.status_id</code><br><code>2</code></td><td>The numeric ID of a deployable status in your Snipe-IT. New assets use it, and so does Return to inventory.</td></tr>
+<tr><td><code>allowServerGeneratedAssetTag</code><br><code>true</code></td><td>Leave <code>true</code> only if automatic asset tags are turned on in Snipe-IT. Otherwise set <code>false</code> and supply an asset-tag mapping.</td></tr>
+<tr><td><code>BoredScannerLocalCSVEnabled</code><br><code>&lt;false/&gt;</code></td><td><code>&lt;true/&gt;</code> allows local CSV saving and export, together. <code>&lt;false/&gt;</code> turns both off.</td></tr>
+<tr><td><code>defaultProfileID</code><br><code>apple</code></td><td>The capture profile selected when the camera opens. People can still pick another supplied profile.</td></tr>
+<tr><td><code>disabledFieldIDs</code><br><code>["bluetoothMAC"]</code></td><td>Fields to stop capturing everywhere. Use <code>[]</code> to turn none off.</td></tr>
+</tbody></table></div>
+
+    <h3>Before rolling out</h3>
+    <ul>
+      <li>When updating an existing deployment, merge into the complete app configuration. Keep other destinations and their token keys.</li>
+      <li>XML-escape special characters in values, such as <code>&amp;amp;</code> for an ampersand.</li>
+      <li>Classic AppConfig carries the token in the MDM payload. Restrict who can see it, and never put a real token in a shared example.</li>
+      <li>Push to one pilot device first and check <strong>Admin setup › Test connection &amp; load fields</strong> in the app.</li>
+    </ul>
+    <p class="small">Console references: <a href="https://developer.jamf.com/developer-guide/docs/managed-app-configuration">Jamf managed app configuration</a> · <a href="https://www.support.kandji.io/kb/appconfig">Kandji AppConfig</a>.</p>
+    <p>API tokens are stored in the device's Keychain. Tokens delivered through classic AppConfig also exist in the managed configuration supplied by the MDM; treat that payload as a credential.</p>
+
+    <h3>Inventory connections</h3>
+    <p>Preconfigure the connection so people can get straight to scanning:</p>
+    <ul>
+      <li>Set Snipe-IT as a destination, with its display name and HTTPS server address.</li>
+      <li>Supply an API token for each enabled destination.</li>
+      <li>Enable or disable individual connections, or disable all managed connections.</li>
+      <li>Map captured fields to the inventory system's API fields, including serial, part number, Wi-Fi MAC, Ethernet MAC, Bluetooth MAC, IMEI and asset tag.</li>
+      <li>Set defaults for new assets, including Snipe-IT model and status IDs.</li>
+      <li>Map exact captured model names to Snipe-IT model IDs.</li>
+      <li>Allow Snipe-IT to generate missing asset tags when that feature is enabled on the server.</li>
+    </ul>
+    <p>Defaults do not overwrite existing assets just because someone scans the same serial again. Choosing a manufacturer profile controls what the scanner looks for; it does not automatically choose a remote model or fill in missing values.</p>
+
+    <h3>Capture profiles and field presets</h3>
+    <p>Decide what the team should capture before the devices arrive:</p>
+    <ul>
+      <li>Turn fields off across all profiles. For example, disable Bluetooth MAC everywhere.</li>
+      <li>Enable or disable fields for a specific profile, such as Ethernet MAC on Apple labels.</li>
+      <li>Preload custom manufacturer or device-label profiles with their own names, fields and printed-label aliases.</li>
+      <li>Define value types: serial number, part number, MAC address or text.</li>
+      <li>Set an initial camera profile. Users can still choose another supplied profile.</li>
+      <li>Lock the managed profile catalog against local edits.</li>
+    </ul>
+    <p>Custom profiles can describe Lenovo, Dell or company-specific labels. They supply the wording to search for; they do not add a new built-in manufacturer recognition engine. Every profile needs an enabled serial-number field.</p>
+    <p>Turning off a field stops its extraction into the selected profile. It does not redact that text from the photo or erase the original OCR evidence.</p>
+
+    <h3>Local CSV inventory</h3>
+    <p>IT can enable or disable <strong>local CSV saving and export together</strong>. The setting is managed and locked on the device.</p>
+    <p>With managed backend connections, local CSV stays off unless the policy explicitly enables it. Disabling it keeps existing entries and cannot revoke copies already exported.</p>
+    <p>CSV export uses Apple's share sheet. Bored Scanner does not automatically save or sync to Files, iCloud Drive, Google Sheets or Microsoft 365. Any restrictions on AirDrop, Mail or other sharing destinations are separate device policies.</p>
+
+    <h3>Assignment, lookup and retirement</h3>
+    <p>The configured destination and API token also serve the asset workflows:</p>
+    <ul>
+      <li>Employees come from the selected inventory system and are cached locally for search.</li>
+      <li>Configure Snipe-IT's archived retirement status.</li>
+      <li>Restoration uses the configured inventory status. Snipe-IT requires that status to be deployable.</li>
+    </ul>
+    <p>There is no separate Google, Okta or HRIS login to configure in Bored Scanner. Sync those sources into the inventory system, then use its user directory. Server-side API permissions still determine what the token can do.</p>
+
+    <h3>Scope and rollout</h3>
+    <p>Settings refresh on launch, foreground and managed-configuration changes. Invalid or withdrawn managed policy blocks the affected feature instead of silently returning to an older local configuration.</p>
+    <p>AppConfig does not currently provide an admin PIN, independent workflow switches, automatic photo retention, remote purge, or separate CSV save/export permissions. Clearing exported CSV entries and clearing scan history/photos are separate, manually confirmed actions in the app.</p>
+    <p>Device enrollment, Apple Business app licensing, installation, updates, VPN access, camera restrictions and certificate trust are handled by the MDM and device environment.</p>
+    <p>Jamf and Kandji tenant deployment still needs pilot validation.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Stuck, or a console we haven't covered? Email <a href="mailto:hello@bacstech.io?subject=Bored%20Scanner%20support">hello@bacstech.io</a>. One inbox, read by a person. </p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Bored Software is a proudly “boring” product line of <a href="https://www.bacstech.io">BACS Tech, Inc.</a></span>
+    <span><a href="../">Apps</a> &middot; <a href="./">Support</a> &middot; <a href="../about.html">About</a> &middot; <a href="mailto:hello@bacstech.io">hello@bacstech.io</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
