@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Bored Software news</title>
+  <subtitle>Releases and updates for Bored Room, Bored Scanner, Bored Package and Bored Guest.</subtitle>
+  <id>https://boredsoftware.space/news.html</id>
+  <link href="https://boredsoftware.space/news.html"/>
+  <link rel="self" href="https://boredsoftware.space/feed.xml"/>
+  <updated>2026-11-13T12:00:00-08:00</updated>
+  <author><name>Bored Software</name></author>
+  <icon>https://boredsoftware.space/favicon.png</icon>
+  <entry>
+    <id>https://boredsoftware.space/news.html#2026-11-13-room-1-1-in-review</id>
+    <title>Bored Room 1.1 is in App Review</title>
+    <link href="https://boredsoftware.space/news.html#2026-11-13-room-1-1-in-review"/>
+    <updated>2026-11-13T12:00:00-08:00</updated>
+    <category term="Bored Room"/>
+    <content type="html">&lt;p&gt;Two things in this one:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Set up with iPhone.&lt;/strong&gt; The iPad shows a code, your iPhone scans it, you sign in with Google and pick the room on the phone, and the setup hands over on your local network. No typing on a wall-mounted iPad, and still no server of ours in the middle. It&#x27;s for offices with a handful of iPads and no MDM; the iPhone needs its own copy of Bored Room.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;One MDM config for every iPad.&lt;/strong&gt; The new &lt;code&gt;calendarIds&lt;/code&gt; key lists your rooms once; each iPad&#x27;s picker only shows those rooms. No per-room profiles. The key goes into the &lt;a href=&quot;https://boredsoftware.space/support/room.html&quot;&gt;Room support page&lt;/a&gt; when 1.1 ships.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Apple decides when it&#x27;s out. We&#x27;ll post here when it is.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://boredsoftware.space/news.html#2026-11-12-instagram</id>
+    <title>We&#x27;re on Instagram</title>
+    <link href="https://boredsoftware.space/news.html#2026-11-12-instagram"/>
+    <updated>2026-11-12T12:00:00-08:00</updated>
+    <category term="Bored Software"/>
+    <content type="html">&lt;p&gt;Photos of iPads on walls, mostly. Thrilling. &lt;a href=&quot;https://instagram.com/boredsoftware.space&quot; rel=&quot;noopener&quot;&gt;@boredsoftware.space&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://boredsoftware.space/news.html#2026-11-12-room-launch-story</id>
+    <title>How Bored Room got to the App Store</title>
+    <link href="https://boredsoftware.space/news.html#2026-11-12-room-launch-story"/>
+    <updated>2026-11-12T12:00:00-08:00</updated>
+    <category term="Bored Room"/>
+    <content type="html">&lt;p&gt;Under four days to build, 26 days in review and two rejections. The long version is on David&#x27;s blog: &lt;a href=&quot;https://marcantonio.me/bored-room-launch/&quot; rel=&quot;noopener&quot;&gt;29 Days, Two Rejections, One Boring App&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://boredsoftware.space/news.html#2026-11-11-room-1-0</id>
+    <title>Bored Room 1.0 is on the App Store</title>
+    <link href="https://boredsoftware.space/news.html#2026-11-11-room-1-0"/>
+    <updated>2026-11-11T12:00:00-08:00</updated>
+    <category term="Bored Room"/>
+    <content type="html">&lt;p&gt;The first Bored app is out. A free/busy sign for the meeting-room door: sign in with Google, pick the room calendar, mount the iPad. 99¢, once. No subscription, no account with us, nothing collected.&lt;/p&gt; &lt;p&gt;&lt;a class=&quot;cta&quot; href=&quot;https://apps.apple.com/app/id6822410239&quot; rel=&quot;noopener&quot;&gt;Get it on the App Store &amp;rarr;&lt;/a&gt; &lt;a class=&quot;cta ghost&quot; href=&quot;https://boredroom.space&quot;&gt;boredroom.space&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://boredsoftware.space/news.html#2026-10-29-meet-scanner</id>
+    <title>Meet Bored Scanner</title>
+    <link href="https://boredsoftware.space/news.html#2026-10-29-meet-scanner"/>
+    <updated>2026-10-29T12:00:00-08:00</updated>
+    <category term="Bored Scanner"/>
+    <content type="html">&lt;p&gt;The second app came from a pallet of laptops. Photograph an asset label and Scanner keeps the serial and MAC addresses and skips the fine print. Capture to a CSV with no setup at all, or connect Snipe-IT to assign, look up and retire from your iPhone or iPad. Same deal: 99¢, no backend.&lt;/p&gt; &lt;p&gt;It&#x27;s in testing now. More on &lt;a href=&quot;https://boredscanner.space&quot;&gt;boredscanner.space&lt;/a&gt;, and the backstory is on David&#x27;s blog: &lt;a href=&quot;https://marcantonio.me/got-bored/&quot; rel=&quot;noopener&quot;&gt;I Got Bored, So I Made Some Apps&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://boredsoftware.space/news.html#2026-10-18-google-verified</id>
+    <title>Google verified Bored Room&#x27;s sign-in</title>
+    <link href="https://boredsoftware.space/news.html#2026-10-18-google-verified"/>
+    <updated>2026-10-18T12:00:00-08:00</updated>
+    <category term="Bored Room"/>
+    <content type="html">&lt;p&gt;Google finished its review of how Bored Room signs in. That means no &quot;unverified app&quot; warning when you connect a calendar. The app asks for one permission, calendar events (&lt;code&gt;calendar.events&lt;/code&gt;), so it can show the room&#x27;s day and book walk-ins. The details are in &lt;a href=&quot;https://boredroom.space/privacy.html#google-permissions&quot;&gt;Bored Room&#x27;s privacy page&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://boredsoftware.space/news.html#2026-10-18-hello</id>
+    <title>Hello, Bored Software</title>
+    <link href="https://boredsoftware.space/news.html#2026-10-18-hello"/>
+    <updated>2026-10-18T12:00:00-08:00</updated>
+    <category term="Bored Software"/>
+    <content type="html">&lt;p&gt;One app turned into a small family, so they got a home. Bored Room is first. Bored Package (whose box is this?) and Bored Guest (who&#x27;s in the lobby?) are coming for the front desk. Every one does one job, costs 99¢ and keeps your data in systems you already own. &lt;a href=&quot;https://boredsoftware.space/about.html&quot;&gt;Why we&#x27;re doing this&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+</feed>
