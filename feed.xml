@@ -5,9 +5,17 @@
   <id>https://boredsoftware.space/news.html</id>
   <link href="https://boredsoftware.space/news.html"/>
   <link rel="self" href="https://boredsoftware.space/feed.xml"/>
-  <updated>2026-11-13T12:00:00-08:00</updated>
+  <updated>2026-11-14T12:00:00-08:00</updated>
   <author><name>Bored Software</name></author>
   <icon>https://boredsoftware.space/favicon.png</icon>
+  <entry>
+    <id>https://boredsoftware.space/news.html#2026-11-14-room-1-1</id>
+    <title>Bored Room 1.1 is on the App Store</title>
+    <link href="https://boredsoftware.space/news.html#2026-11-14-room-1-1"/>
+    <updated>2026-11-14T12:00:00-08:00</updated>
+    <category term="Bored Room"/>
+    <content type="html">&lt;p&gt;Apple approved it, so the update from yesterday&#x27;s post is out. Free for anyone who bought 1.0.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Set up with iPhone.&lt;/strong&gt; On the iPad, tap &quot;Set up with iPhone&quot; and scan the code with Bored Room on your phone. Connect Google Calendar and answer the questions there. The iPad keeps the sign-in, the phone keeps nothing, and the two talk directly (guest Wi-Fi is fine). Later, Settings › Room › &quot;Change from iPhone&quot; moves an iPad to another room. Whether you need the iPhone copy at all: &lt;a href=&quot;https://boredroom.space/setup.html#iphone-app&quot;&gt;the decision chart&lt;/a&gt;. Short version: it&#x27;s worth it from about six iPads without an MDM.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;One MDM config for every iPad.&lt;/strong&gt; &lt;code&gt;calendarIds&lt;/code&gt; lists your rooms once; each iPad&#x27;s picker only shows those. It&#x27;s in the &lt;a href=&quot;https://boredsoftware.space/support/room.html&quot;&gt;Room key table&lt;/a&gt; now.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Plainer wording.&lt;/strong&gt; &quot;Connect Google Calendar&quot; replaces &quot;Sign in with Google&quot;, because Bored Room has no accounts of its own.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The setup guides on &lt;a href=&quot;https://boredroom.space/setup.html&quot;&gt;boredroom.space&lt;/a&gt; cover all of it. Still not in this one: the light-up case support. It comes in a later update, once it&#x27;s been tested on an actual case.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>https://boredsoftware.space/news.html#2026-11-13-room-1-1-in-review</id>
     <title>Bored Room 1.1 is in App Review</title>

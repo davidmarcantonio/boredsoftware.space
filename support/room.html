@@ -36,7 +36,7 @@
 
   <div class="appbar room">
     <img src="../app-room.png" alt="" width="72" height="72">
-    <div><h1>Bored Room support</h1><p class="tag">Is the room free? · iPad · Coming soon · <a href="https://boredroom.space">boredroom.space</a></p></div>
+    <div><h1>Bored Room support</h1><p class="tag">Is the room free? · iPad, set up from iPhone · <a href="https://apps.apple.com/app/id6822410239">On the App Store</a> · <a href="https://boredroom.space">boredroom.space</a></p></div>
   </div>
   <nav class="toc" aria-label="On this page"><a href="#faq">FAQ</a><a href="#guides">Guides</a><a href="#mdm">MDM keys</a><a href="#contact">Contact</a></nav>
 </div>
@@ -110,6 +110,7 @@
 <tbody>
 <tr><td><code>serviceAccountKey</code></td><td>String</td><td>The Google service account key file, raw JSON or base64. Same value on every iPad.</td></tr>
 <tr><td><code>calendarId</code></td><td>String</td><td>The room's calendar ID, e.g. <code>c_…@resource.calendar.google.com</code>. One per iPad; skips the room picker.</td></tr>
+<tr><td><code>calendarIds</code></td><td>String</td><td>1.1 and later. The rooms this iPad may show: calendar IDs separated by commas. Same list on every iPad; the room picker shows only these, and with a service account nobody adds them by ID. Leave out <code>calendarId</code> to let whoever mounts the iPad pick.</td></tr>
 <tr><td><code>roomName</code></td><td>String</td><td>Text at the top of the board. One per iPad.</td></tr>
 <tr><td><code>pin</code></td><td>String</td><td>Exactly 4 digits, as a string. Guards the app's Settings.</td></tr>
 <tr><td><code>allowBooking</code></td><td>Boolean</td><td>Show "Book now" when the room is free. Needs write access on the share.</td></tr>
@@ -122,7 +123,7 @@
 <tr><td><code>backgroundImageURL</code></td><td>String</td><td>An <code>https://</code> link to a JPEG, PNG or HEIC, 10 MB or less. Downloaded at most once a day. Locks the Background section.</td></tr>
 <tr><td><code>backgroundDimming</code></td><td>Integer</td><td>How much the photo is darkened, 30 to 90 (percent). Default 55.</td></tr>
 </tbody></table></div>
-    <p class="small">With <code>serviceAccountKey</code>, <code>calendarId</code>, <code>roomName</code> and <code>pin</code> set, the iPad skips setup and boots to the board. If none of the hours keys are pushed, the default is Monday to Friday, 07:00 to 17:00.</p>
+    <p class="small">With <code>serviceAccountKey</code>, <code>calendarId</code>, <code>roomName</code> and <code>pin</code> set, the iPad skips setup and boots to the board. With <code>calendarIds</code> instead of <code>calendarId</code> and <code>roomName</code>, one profile fits every iPad and setup stops at the room picker. If none of the hours keys are pushed, the default is Monday to Friday, 07:00 to 17:00.</p>
   </section>
 
   <section id="contact">
