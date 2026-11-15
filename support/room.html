@@ -21,6 +21,7 @@
 <link rel="icon" type="image/png" sizes="64x64" href="../favicon.png?v=2">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
 <link rel="stylesheet" href="../style.css?v=8">
+<link rel="stylesheet" href="/menu.css?v=1">
 </head>
 <body>
 
@@ -37,14 +38,14 @@
           <a class="sw-all" href="../">All Bored Software &rarr;</a>
         </div>
       </details>
-      <nav class="toplinks"><a href="../">Apps</a><a href="../news.html">News</a><a href="./">Support</a><a href="../about.html">About</a></nav>
+      <nav class="toplinks"><a href="../">Apps</a><a href="../news.html">News</a><a href="./">Support</a><a href="../about.html">About</a><details class="bmenu"><summary>Menu</summary><div class="bmenu-panel"><div class="bmenu-group bmenu-software"><h4><i style="background:#3E5A72"></i>Bored Software</h4><ul><li><a href="https://boredsoftware.space/">Apps</a></li><li><a href="https://boredsoftware.space/news.html">News</a></li><li><a href="https://boredsoftware.space/support/">Support</a></li><li><a href="https://boredsoftware.space/about.html">About</a></li></ul></div><div class="bmenu-group bmenu-room"><h4><i style="background:#1C8C6E"></i>Bored Room</h4><ul><li><a href="https://boredroom.space/">Home</a></li><li><a href="https://boredroom.space/setup.html">Setup guides</a></li><li><a href="https://boredroom.space/setup-manual.html">By hand / iPhone</a></li><li><a href="https://boredroom.space/setup-configurator.html">Apple Configurator</a></li><li><a href="https://boredroom.space/setup-mdm.html">MDM</a></li><li><a href="https://boredroom.space/setup-service-account.html">Service account</a></li><li><a href="https://boredroom.space/mounting.html">Mounting and power</a></li><li><a href="https://boredroom.space/privacy.html">Privacy</a></li><li><a href="https://boredsoftware.space/support/room.html" aria-current="page">Support</a></li></ul></div><div class="bmenu-group bmenu-scanner"><h4><i style="background:#6B3FC4"></i>Bored Scanner</h4><ul><li><a href="https://boredscanner.space/">Home</a></li><li><a href="https://boredscanner.space/scanning.html">Scanning</a></li><li><a href="https://boredscanner.space/compare.html">Compare</a></li><li><a href="https://boredscanner.space/privacy.html">Privacy</a></li><li><a href="https://boredsoftware.space/support/scanner.html">Support</a></li></ul></div><div class="bmenu-group bmenu-package"><h4><i style="background:#1A6FB8"></i>Bored Package <small>Soon</small></h4><ul><li><a href="https://boredpackage.space/">Home</a></li><li><a href="https://boredsoftware.space/support/package.html">Support</a></li></ul></div><div class="bmenu-group bmenu-guest"><h4><i style="background:#C2510F"></i>Bored Guest <small>Soon</small></h4><ul><li><a href="https://boredguest.space/">Home</a></li><li><a href="https://boredsoftware.space/support/guest.html">Support</a></li></ul></div></div></details></nav>
     </div>
     <p class="crumbs"><a href="./">Support</a> <span aria-hidden="true">›</span> Bored Room</p>
   </header>
 
   <div class="appbar room">
     <img src="../app-room.png" alt="" width="72" height="72">
-    <div><h1>Bored Room support</h1><p class="tag">Is the room free? · iPad, set up from iPhone · <a href="https://apps.apple.com/app/id6822410239">On the App Store</a> · <a href="https://boredroom.space">boredroom.space</a></p></div>
+    <div><h1>Bored Room support</h1><p class="tag">Is the room free? · Version 1.1 · iPad and iPhone · <a href="https://apps.apple.com/app/id6822410239">On the App Store</a> · <a href="https://boredroom.space">boredroom.space</a></p></div>
   </div>
   <nav class="toc" aria-label="On this page"><a href="#faq">FAQ</a><a href="#guides">Guides</a><a href="#mdm">MDM keys</a><a href="#contact">Contact</a></nav>
 </div>
@@ -54,11 +55,23 @@
     <h2>FAQ</h2>
       <details>
         <summary>When can I buy it?</summary>
-        <p>Soon. Bored Room is waiting on Apple's App Store review. The setup guides are ready now, so you can plan the wall and power while you wait.</p>
+        <p>Now. Bored Room 1.1 is <a href="https://apps.apple.com/app/id6822410239">on the App Store</a> for 99¢ per iPad, or through Apple Business if you deploy iPads in bulk. Plan the wall and power with the guides below first.</p>
       </details>
       <details>
-        <summary>Which iPads does it run on?</summary>
-        <p>Any iPad on iPadOS 17 or later. An older iPad you already own is fine; the app is light. It works in landscape and portrait.</p>
+        <summary>Which devices does it run on?</summary>
+        <p>iPad on iPadOS 17 or later shows the board. An older iPad you already own is fine; the app is light. It works in landscape and portrait. iPhone on iOS 17 or later runs the same app as a setup remote for your iPads (1.1 and later); it never shows a board.</p>
+      </details>
+      <details>
+        <summary>What's new in 1.1?</summary>
+        <p>Set up with iPhone: the iPad shows a code, Bored Room on your iPhone scans it, and you connect Google Calendar and answer the setup questions on the phone. The iPad keeps the sign-in; the phone keeps nothing. Change from iPhone (Settings › Room) moves an iPad to another room the same way. For MDM, the <code>calendarIds</code> key gives every iPad the same room list. The Google step now reads "Connect Google Calendar". Free for anyone who bought 1.0. <a href="../news.html#2026-11-14-room-1-1">Release notes</a>.</p>
+      </details>
+      <details>
+        <summary>Do I need Bored Room on my iPhone?</summary>
+        <p>No, it's optional, and with an MDM you can skip it. It earns its keep from about six iPads set up by hand. It's free if the iPad's copy was bought with the same Apple Account as your iPhone; copies from Apple Business or Configurator belong to each iPad, so the phone needs its own (99¢). <a href="https://boredroom.space/setup.html#iphone-app">The decision chart</a> walks through it.</p>
+      </details>
+      <details>
+        <summary>The iPhone says "Can't reach the iPad."</summary>
+        <p>Check the iPad is still showing its code, and that Wi-Fi and Bluetooth are on for both devices, then tap Try again. They don't need to share a network; guest Wi-Fi is fine. If someone tapped Don't Allow on the Local Network prompt, turn it back on in Settings › Privacy &amp; Security › Local Network › Bored Room, on whichever device asked. It works in Single App Mode too. <a href="https://boredroom.space/setup-manual.html#iphone">Full steps</a>.</p>
       </details>
       <details>
         <summary>Does it work with Microsoft 365 or Outlook?</summary>
@@ -78,7 +91,7 @@
       </details>
       <details>
         <summary>I forgot the PIN.</summary>
-        <p>Tap "Forgot PIN?" on the PIN screen and prove you're the admin the same way the iPad was set up: sign in again as the board's Google account, or choose the service account's key file again. If your MDM pushes the PIN, change it there instead.</p>
+        <p>Tap "Forgot PIN?" on the PIN screen and prove you're the admin the same way the iPad was set up: tap Verify with Google and sign in as the board's Google account, or choose the service account's key file again. If your MDM pushes the PIN, change it there instead.</p>
       </details>
       <details>
         <summary>How do I keep people from changing the settings?</summary>
@@ -95,7 +108,9 @@
     <p>Start with the wall: power and a mount at each door come before the app.</p>
     <ul class="guides">
       <li><a href="https://boredroom.space/mounting.html">Mounting and power</a><span>Spot, power or PoE, mount, cabling quote. Do this first.</span></li>
-      <li><a href="https://boredroom.space/setup-manual.html">Set up by hand</a><span>For an office admin. About 15 minutes the first time.</span></li>
+      <li><a href="https://boredroom.space/setup-manual.html#iphone">Set up with iPhone</a><span>Easiest. Scan the iPad's code, finish on your phone. 1.1 and later.</span></li>
+      <li><a href="https://boredroom.space/setup.html#iphone-app">Do you need the iPhone app?</a><span>A two-question chart: how many iPads, and how you bought them.</span></li>
+      <li><a href="https://boredroom.space/setup-manual.html">Set up by hand</a><span>For an office admin, on the iPad itself. About 15 minutes the first time.</span></li>
       <li><a href="https://boredroom.space/setup-configurator.html">Set up with Apple Configurator</a><span>For the one-person IT shop. Supervision and Single App Mode.</span></li>
       <li><a href="https://boredroom.space/setup-mdm.html">Deploy through your MDM</a><span>Zero-touch for Jamf, Mosyle, Iru (Kandji), Intune and similar.</span></li>
       <li><a href="https://boredroom.space/setup-service-account.html">Set up a Google service account</a><span>No person's account on the iPad. Needed for MDM.</span></li>
@@ -107,6 +122,7 @@
   <section id="mdm">
     <h2>MDM configuration</h2>
     <dl class="facts">
+      <dt>Version</dt><dd>1.1 (November 14, 2026). Universal app: iPad shows the board, iPhone sets up iPads.</dd>
       <dt>Bundle ID</dt><dd><code>com.dmarcantonio.RoomBoard</code> (the App Store name is Bored Room; the bundle ID predates the rename)</dd>
       <dt>Format</dt><dd>Standard Managed App Configuration (AppConfig) dictionary. Every key is optional. A pushed key overrides the iPad's value and locks it in Settings.</dd>
       <dt>Spec file</dt><dd><a href="https://boredroom.space/BoredRoom.appconfig.xml">BoredRoom.appconfig.xml</a> for consoles that import AppConfig Community specs (Workspace ONE, Ivanti, MaaS360, SOTI, ManageEngine). Jamf, Intune, Mosyle and Iru take the dictionary as a plist.</dd>
